@@ -1,16 +1,13 @@
 <script setup lang="ts">
-import { defineComponent } from "vue";
 import { useProductsStore } from "./stores/useProductsStore";
 import ProductCard from "@/components/ProductCard/ProductCard.vue";
 const productsStore = useProductsStore();
 console.log(productsStore);
+</script>
 
-const product1 = {
-  name: "KoalityPhone",
-  price: 200,
-};
-
-defineComponent({
+<script lang="ts">
+import { defineComponent } from "vue";
+export default defineComponent({
   name: "HomeView",
   components: {
     ProductCard,

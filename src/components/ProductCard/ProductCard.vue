@@ -1,12 +1,12 @@
 <script lang="ts" setup>
 import { useProductsStore } from "@/stores/useProductsStore";
-import { defineComponent } from "@vue/runtime-core";
 
 const productsStore = useProductsStore();
 console.log(productsStore);
 </script>
 
 <script lang="ts">
+import { defineComponent } from "vue";
 export default defineComponent({
   props: {
     imgUrl: String,
