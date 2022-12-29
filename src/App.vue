@@ -1,11 +1,12 @@
 <script setup lang="ts">
 import { useProductsStore } from "./stores/useProductsStore";
-import ProductCard from "@/components/ProductCard/ProductCard.vue";
+
 const productsStore = useProductsStore();
 console.log(productsStore);
 </script>
 
 <script lang="ts">
+import ProductCard from "@/components/ProductCard/ProductCard.vue";
 import { defineComponent } from "vue";
 export default defineComponent({
   name: "HomeView",
