@@ -17,14 +17,18 @@ export default defineComponent({
 </script>
 
 <template>
-  <div>App Component</div>
   <HeaderNav />
   <router-view />
 </template>
 
 <style lang="scss">
+* {
+  padding: 0;
+  margin: 0;
+}
+
 body {
-  background-color: cadetblue;
+  background-color: #480ca8;
   font-family: "Roboto", sans-serif;
 }
 
