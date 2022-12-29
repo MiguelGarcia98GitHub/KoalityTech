@@ -2,7 +2,6 @@
 import { useProductsStore } from "@/stores/useProductsStore";
 
 const productsStore = useProductsStore();
-console.log(productsStore);
 </script>
 
 <script lang="ts">
@@ -36,18 +35,41 @@ export default defineComponent({
 </template>
 
 <style scoped lang="scss">
+li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+button {
+  background-color: #272727;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  color: white;
+  border-radius: 0.5rem;
+  cursor: pointer;
+
+  &:hover {
+    background-color: white;
+    color: #272727;
+    transition: 0.5s;
+    transform: translateY(-3px);
+  }
+}
+
 .product-card_container {
-  width: 20rem;
-  height: 25rem;
+  width: 18rem;
+  height: 27rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   box-shadow: 0px 0px 23px 4px rgba(0, 0, 0, 0.75);
   border-radius: 10%;
-
+  background-color: #3f37c9;
   .product-img_container {
-    width: 250px;
+    width: 230px;
     display: flex;
     align-items: center;
     justify-content: center;
