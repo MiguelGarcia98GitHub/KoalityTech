@@ -17,20 +17,22 @@ export default defineComponent({
 </script>
 
 <template>
-  <div class="product-card_container">
-    <div class="product-img_container">
-      <img :src="imgUrl" alt="product" class="product-img" />
+  <li>
+    <div class="product-card_container">
+      <div class="product-img_container">
+        <img :src="imgUrl" alt="product" class="product-img" />
+      </div>
+      <div class="name_container">
+        {{ name }}
+      </div>
+      <div class="price_container">Price: {{ price }} $</div>
+      <div class="button-panel_container">
+        <button @click="productsStore.addToCart({ imgUrl, name, price })">
+          Add to Cart
+        </button>
+      </div>
     </div>
-    <div class="name_container">
-      {{ name }}
-    </div>
-    <div class="price_container">Price: {{ price }} $</div>
-    <div class="button-panel_container">
-      <button @click="productsStore.addToCart({ imgUrl, name, price })">
-        Add to Cart
-      </button>
-    </div>
-  </div>
+  </li>
 </template>
 
 <style scoped lang="scss">
