@@ -20,12 +20,20 @@ defineComponent({
 
 <template>
   <div>App Component</div>
-  <button @click="productsStore.addToCart(product1)">ADD PRODUCT 1</button>
-  <ProductCard />
+  <ProductCard
+    imgUrl="https://img.pccomponentes.com/articles/1048/10489999/1121-lg-gram-17z90q-gaa78b-intel-core-i7-1260p-16gb-1tb-ssd-17.jpg"
+    name="Laptop LG Gram 17Z90Q"
+    :price="1400"
+  />
 </template>
 
 <style lang="scss">
 body {
   background-color: cadetblue;
+  font-family: "Roboto", sans-serif;
+}
+
+img {
+  width: 200px;
 }
 </style>
