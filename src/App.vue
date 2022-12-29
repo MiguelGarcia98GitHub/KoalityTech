@@ -1,16 +1,14 @@
 <script setup lang="ts">
-import { defineComponent } from "vue";
 import { useProductsStore } from "./stores/useProductsStore";
-import ProductCard from "@/components/ProductCard/ProductCard.vue";
+
 const productsStore = useProductsStore();
 console.log(productsStore);
+</script>
 
-const product1 = {
-  name: "KoalityPhone",
-  price: 200,
-};
-
-defineComponent({
+<script lang="ts">
+import ProductCard from "@/components/ProductCard/ProductCard.vue";
+import { defineComponent } from "vue";
+export default defineComponent({
   name: "HomeView",
   components: {
     ProductCard,
@@ -20,12 +18,20 @@ defineComponent({
 
 <template>
   <div>App Component</div>
-  <button @click="productsStore.addToCart(product1)">ADD PRODUCT 1</button>
-  <ProductCard />
+  <ProductCard
+    imgUrl="https://img.pccomponentes.com/articles/1048/10489999/1121-lg-gram-17z90q-gaa78b-intel-core-i7-1260p-16gb-1tb-ssd-17.jpg"
+    name="Laptop LG Gram 17Z90Q"
+    :price="1400"
+  />
 </template>
 
 <style lang="scss">
 body {
   background-color: cadetblue;
+  font-family: "Roboto", sans-serif;
+}
+
+img {
+  width: 200px;
 }
 </style>

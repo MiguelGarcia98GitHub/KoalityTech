@@ -1,4 +1,5 @@
 export type productType = {
-  name: string;
-  price: number;
+  imgUrl?: string;
+  name?: string;
+  price?: number;
 };
