@@ -25,6 +25,7 @@ export default defineComponent({
         :imgUrl="product.imgUrl"
         :name="product.name"
         :price="product.price"
+        :priceStripeID="product.priceStripeID"
       />
     </ul>
   </div>

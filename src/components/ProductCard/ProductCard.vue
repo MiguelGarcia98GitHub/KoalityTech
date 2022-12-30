@@ -11,6 +11,7 @@ export default defineComponent({
     imgUrl: String,
     name: String,
     price: Number,
+    priceStripeID: String,
   },
 });
 </script>
@@ -26,7 +27,11 @@ export default defineComponent({
       </div>
       <div class="price_container">Price: {{ price }} $</div>
       <div class="button-panel_container">
-        <button @click="productsStore.addToCart({ imgUrl, name, price })">
+        <button
+          @click="
+            productsStore.addToCart({ imgUrl, name, price, priceStripeID })
+          "
+        >
           Add to Cart
         </button>
       </div>

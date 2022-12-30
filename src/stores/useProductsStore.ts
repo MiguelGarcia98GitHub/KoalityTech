@@ -4,6 +4,7 @@ import { productType } from "../models/product";
 export const useProductsStore = defineStore("products", {
   state: () => ({
     cart: [] as productType[],
+    errorState: "",
   }),
 
   getters: {
@@ -18,11 +19,21 @@ export const useProductsStore = defineStore("products", {
 
   actions: {
     addToCart(item: productType) {
+      console.log(item);
       if (this.cart.some((e) => e.name == item.name)) return;
       this.cart.push(item);
     },
     removeFromCart(item: productType) {
       this.cart = this.cart.filter((cartItem) => cartItem.name !== item.name);
+    },
+    getCartData() {
+      return this.cart;
+    },
+    changeErrorStateTemporarily(newError: string) {
+      this.errorState = newError;
+      setTimeout(() => {
+        this.errorState = "";
+      }, 3000);
     },
   },
 });
